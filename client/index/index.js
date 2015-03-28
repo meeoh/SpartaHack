@@ -1,3 +1,5 @@
 Template.index.rendered = function() {
-	Meteor.call('what');
+	var info = Meteor.call('what');
+	Session.setPersistent("info", info);
+	console.log(info);
 }

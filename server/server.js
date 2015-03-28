@@ -10,6 +10,8 @@ Meteor.methods({
 		var time = result.data.routes[0].legs[0].duration.text;
 		var start = result.data.routes[0].legs[0].start_address;
 		var end = result.data.routes[0].legs[0].end_address;
+
+		var info = [distance, time, start, end];
 		// end_location
 
 		var i;
@@ -25,7 +27,7 @@ Meteor.methods({
 		console.log(end);
 
 		// console.log(result);
-
+		return info;
 	}
 
 
