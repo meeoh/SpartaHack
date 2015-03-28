@@ -15,8 +15,9 @@ Meteor.methods({
 		for (i = 0; i < length; i = i + 1)
 		{
 			// console.log(result.data.routes[0].legs[0].steps[i].html_instructions);
-			result.data.routes[0].legs[0].steps[i].html_instructions = 
-			$.parseHTML(result.data.routes[0].legs[0].steps[i].html_instructions);
+			// steps[i].html_instructions = $.parseHTML(steps[i].html_instructions);
+			var test = "<b>hi</b>";
+			steps[i].html_instructions = steps[i].html_instructions.replace(/(<([^>]+)>)/ig, " ");
 
 		}
 

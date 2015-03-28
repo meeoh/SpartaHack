@@ -10,17 +10,8 @@
 
 
 <body>
-		{{> transportationModal}}
+		
 
-		<div class="inputs">
-
-		<input type="text" placeholder="start location" class="start">
-
-		<input type="text" placeholder="end location" class="end">
-
-		</div>
-	
-	<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">TRAVEL</button>
 	<!-- <h1>FROM: {{starting}} TO: {{ending}}</h1> -->
 
 	<h2> Transportation </h2>  
@@ -35,12 +26,12 @@
 				<thead>
 					<tr>
 						<th colspan="2">
-							Travel Cost & Statistics
+							Travel Distance & Statistics
 						</th>
 					</tr>
 
 					<tr style="border-bottom:1px solid black;">
-						<th style="padding:5px;border-left:1px solid black;">Travel Cost
+						<th style="padding:5px;border-left:1px solid black;">Distance
 						</th>
 
 						<th style="padding:5px;border-left:1px solid black;"> Travel Time
@@ -52,7 +43,7 @@
 				<tbody>
 
 					<tr>
-						<td style="padding:5px;">nah we straight</td>
+						<td style="padding:5px;">{{distance}}</td>
 						<td style="padding:5px;border-left:1px solid black;">{{timing}}</td>
 					</tr>
 
