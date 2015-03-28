@@ -7,6 +7,9 @@ Template.transportationModal.events({
 		console.log(start);
 		console.log(end);
 
+		Session.setPersistent("start", start);
+		Session.setPersistent("end", end);
+
 	
 
 	}
