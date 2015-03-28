@@ -40,10 +40,10 @@
 					</tr>
 
 					<tr style="border-bottom:1px solid black;">
-						<th style="padding:5px;border-left:1px solid black;">Travel Cost: 
+						<th style="padding:5px;border-left:1px solid black;">Travel Cost
 						</th>
 
-						<th style="padding:5px;border-left:1px solid black;"> Travel Time:
+						<th style="padding:5px;border-left:1px solid black;"> Travel Time
 						</th>
 					</tr>
 
@@ -52,8 +52,8 @@
 				<tbody>
 
 					<tr>
-						<td style="padding:5px;">{{Cost}}</td>
-						<td style="padding:5px;border-left:1px solid black;">{{Time}}</td>
+						<td style="padding:5px;">nah we straight</td>
+						<td style="padding:5px;border-left:1px solid black;">{{timing}}</td>
 					</tr>
 
 
@@ -67,10 +67,10 @@
 				<p>  Travel Directions </p>
 			
 				<ol>
-					<li> {{Direction1}} </li>
-					<li> {{Direction2}} </li>
-					<li> {{Direction3}} </li>
-					<li> {{Direction4}} </li>
+					{{#each steps}}
+						<li>{{html_instructions}}</li>
+					{{/each}}
+
 				</ol>
 			</div>
 
@@ -78,15 +78,15 @@
 
 	<h3> Accommodations </h3> 
 
-	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTujpNtVRW856IOv8ojg4v_ibcGlQ9UIrn3HP7kZ-mZXuDXXr3e" 
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTujpNtVRW856IOv8ojg4v_ibcGlQ9UIrn3HP7kZ-mZXuDXXr3e"> 
 
 	<ul> 
-		<li> Nearest Hotel: {{Hotel Name, Location}}
+		<li> Nearest Hotel: Hotel Name: Locations: </li>
 	</ul>
 	ALIGN LEFT> 
 	<h4> Attractions & Activites </h4> <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQE-Gl80uKvrTo6JQYQdLNJ5PhqhJAz-42g-bKKvXzHSFCqf9jM" />
 
-	<ul>
+	<!-- <ul>
 		<li> {{Attraction1}} </li>
 		<li> {{Attraction2}} </li>
 		<li> {{Attraction3}} </li>
