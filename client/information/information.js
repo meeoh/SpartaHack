@@ -1,10 +1,10 @@
 Template.information.helpers({
 
 	'starting': function() {
-		return (Session.get("info"))[2];
+		return Session.get("start");
 	},
 	'ending': function() {
-		return (Session.get("info"))[3];
+		return Session.get("end");
 	}
 
 
