@@ -6,3 +6,24 @@ h1 {
 	font-family: Georgia;
 	color: black;
 }
+
+body h2 div div {
+
+	text-align: center;
+
+}
+
+.trans {
+    width: 400x;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.trans img {
+    margin-right: 30px;
+    float: left;
+    display: inline;
+}
+
+
+

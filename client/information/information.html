@@ -10,40 +10,80 @@
 
 
 <body>
+		{{> transportationModal}}
+
+		<div class="inputs">
+
+		<input type="text" placeholder="start location" class="start">
+
+		<input type="text" placeholder="end location" class="end">
+
+		</div>
+	
+	<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">TRAVEL</button>
+	<!-- <h1>FROM: {{starting}} TO: {{ending}}</h1> -->
+
+	<h2> Transportation </h2>  
 		
-<!-- <h1>FROM: {{starting}} TO: {{ending}}</h1> -->
+		<div class="trans">
+			<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRky3oNyKcq_2sL1yZfOtZ3EWUzbH-QE5aEcQUH2xu5a9w3tyG7"/> 
 
-	<h2> Transportation </h2> <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRky3oNyKcq_2sL1yZfOtZ3EWUzbH-QE5aEcQUH2xu5a9w3tyG7"/>
+		
 
-	<ul>
-		<li> Method of transportation: {{starting}} </li>
+			<table style="border-collapse:collapse;">
+
+				<thead>
+					<tr>
+						<th colspan="2">
+							Travel Cost & Statistics
+						</th>
+					</tr>
+
+					<tr style="border-bottom:1px solid black;">
+						<th style="padding:5px;border-left:1px solid black;">Travel Cost: 
+						</th>
+
+						<th style="padding:5px;border-left:1px solid black;"> Travel Time:
+						</th>
+					</tr>
 
 
-		<table>
+				</thead>
+				<tbody>
 
-			<thead>
-				<tr>
-					<th colspan="2">
-						Travel Cost & Statistics
-					</th>
-				</tr>
+					<tr>
+						<td style="padding:5px;">{{Cost}}</td>
+						<td style="padding:5px;border-left:1px solid black;">{{Time}}</td>
+					</tr>
 
-			</thead>
+
+				</tbody>
+			</table>
+
 			
-
-			<tr></tr>
-			<tr></tr>
-		</table>
+		</div>
+		
+			<div class="directions">
+				<p>  Travel Directions </p>
 			
+				<ol>
+					<li> {{Direction1}} </li>
+					<li> {{Direction2}} </li>
+					<li> {{Direction3}} </li>
+					<li> {{Direction4}} </li>
+				</ol>
+			</div>
 
-	</ul>
+	
 
-	<!-- <h3> Accommodations </h3> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTujpNtVRW856IOv8ojg4v_ibcGlQ9UIrn3HP7kZ-mZXuDXXr3e" />
+	<h3> Accommodations </h3> 
+
+	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTujpNtVRW856IOv8ojg4v_ibcGlQ9UIrn3HP7kZ-mZXuDXXr3e" 
 
 	<ul> 
 		<li> Nearest Hotel: {{Hotel Name, Location}}
 	</ul>
-
+	ALIGN LEFT> 
 	<h4> Attractions & Activites </h4> <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQE-Gl80uKvrTo6JQYQdLNJ5PhqhJAz-42g-bKKvXzHSFCqf9jM" />
 
 	<ul>
