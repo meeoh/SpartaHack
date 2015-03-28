@@ -1,6 +1,4 @@
-<<<<<<< HEAD
-<!--<template name="information">-->
-<!DOCTYPE html>
+<template name="information">
 	<html>
 
 	<head>
@@ -12,8 +10,18 @@
 
 
 <body>
+		{{> transportationModal}}
 
-	<h1>FROM: {{starting}} TO: {{ending}}</h1>
+		<div class="inputs">
+
+		<input type="text" placeholder="start location" class="start">
+
+		<input type="text" placeholder="end location" class="end">
+
+		</div>
+	
+	<button class="btn btn-primary" data-toggle="modal" data-target="#myModal">TRAVEL</button>
+	<!-- <h1>FROM: {{starting}} TO: {{ending}}</h1> -->
 
 	<h2> Transportation </h2> <img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRky3oNyKcq_2sL1yZfOtZ3EWUzbH-QE5aEcQUH2xu5a9w3tyG7"/>
 
@@ -29,15 +37,18 @@
 						Travel Cost & Statistics
 					</th>
 				</tr>
+
+			</thead>
 			
 
 			<tr></tr>
 			<tr></tr>
+		</table>
 			
 
 	</ul>
 
-	<h3> Accommodations </h3> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTujpNtVRW856IOv8ojg4v_ibcGlQ9UIrn3HP7kZ-mZXuDXXr3e" />
+	<!-- <h3> Accommodations </h3> <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTujpNtVRW856IOv8ojg4v_ibcGlQ9UIrn3HP7kZ-mZXuDXXr3e" />
 
 	<ul> 
 		<li> Nearest Hotel: {{Hotel Name, Location}}
@@ -49,17 +60,12 @@
 		<li> {{Attraction1}} </li>
 		<li> {{Attraction2}} </li>
 		<li> {{Attraction3}} </li>
-		<li> {{Attraction4}} </li>
-	</ul>
+		<li> {{Attraction4}} </li> -->
+	<!-- </ul> -->
 
 </body>
 
 </html>
 
-<!--</template>-->
-
-=======
-<template name="information">
-	<h1>FROM : {{starting}}  TO : {{ending}}</h1>
 </template>
->>>>>>> origin/master
+
