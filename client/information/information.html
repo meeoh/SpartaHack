@@ -1,40 +1,41 @@
 <template name="information">
-	<html>
-
-	<head>
-		<link type="text/css" rel="stylesheet" href="information.css"/>
-
-		<title> Travel </title>
-
-	</head>
 
 
-<body>
-		
 
-	<!-- <h1>FROM: {{starting}} TO: {{ending}}</h1> -->
+                    <h2 class="locations"><b> {{starting}} to {{ending}} </b></h2>
 
-	<h2> Transportation </h2>  
+<div class="bs-example">
+    <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">1. Transportation</a>
+                </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse ">
+                <div class="panel-body">
+                  
+
+
+
+	<br>  
 		
 		<div class="trans">
-			<img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRky3oNyKcq_2sL1yZfOtZ3EWUzbH-QE5aEcQUH2xu5a9w3tyG7"/> 
+			
 
 		
 
 			<table style="border-collapse:collapse;">
 
 				<thead>
-					<tr>
-						<th colspan="2">
-							Travel Distance & Statistics
-						</th>
-					</tr>
+					
 
-					<tr style="border-bottom:1px solid black;">
-						<th style="padding:5px;border-left:1px solid black;">Distance
+					<tr style="">
+						<th style=""><u>Distance</u>
 						</th>
 
-						<th style="padding:5px;border-left:1px solid black;"> Travel Time
+						<th></th>
+						<th style=""> <u>Travel Time</u>
 						</th>
 					</tr>
 
@@ -43,55 +44,205 @@
 				<tbody>
 
 					<tr>
-						<td style="padding:5px;">{{distance}}</td>
-						<td style="padding:5px;border-left:1px solid black;">{{timing}}</td>
+						<td style="padding:5px;" class="distance">{{distance}}</td>
+						<td></td>
+						<td style="" class="timing">{{timing}}</td>
 					</tr>
 
 
 				</tbody>
 			</table>
-
+<br>
 			
 		</div>
 		
 			<div class="directions">
-				<p>  Travel Directions </p>
+				<p class="travHeader">  <u>Travel Directions</u> </p>
 			
 				<ol>
 					{{#each steps}}
-						<li>{{html_instructions}}</li>
+						<li class="step">{{html_instructions}}</li>
 					{{/each}}
 
 				</ol>
 			</div>
+                </div>
+            </div>
+        </div>
 
-	
 
-	<h3> Accommodations </h3> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">2. Accomodation</a>
+                </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse">
+                <div class="panel-body">
+
 
 	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTujpNtVRW856IOv8ojg4v_ibcGlQ9UIrn3HP7kZ-mZXuDXXr3e"> 
 
-	<ul> 
-		<!--<li> Nearest Hotel: Hotel Name: Locations: </li>-->
-		{{#each rating}} 
-			<li>{{.}}</li> 
-		{{/each}} 
-		{{#each pricing}}
-			<li>{{.}}</li>
-		{{/each}}
-	</ul>
-	<h4> Attractions & Activites </h4> <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQE-Gl80uKvrTo6JQYQdLNJ5PhqhJAz-42g-bKKvXzHSFCqf9jM" />
+	<table class="cray">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Price</th>
+				<th>Rating</th>
+			</tr>
+		</thead>
+		<tbody>
 
-	<!-- <ul>
-		<li> {{Attraction1}} </li>
-		<li> {{Attraction2}} </li>
-		<li> {{Attraction3}} </li>
-		<li> {{Attraction4}} </li> -->
-	<!-- </ul> -->
 
-</body>
+			
+			<tr>
+				<td>{{hotelName 0}}</td>
+				<td>{{pricing 0}}</td>
+				<td>{{rating 0}}</td>
+			</tr>
+			<tr>
+				<td>{{hotelName 1}}</td>
+				<td>{{pricing 1}}</td>
+				<td>{{rating 1}}</td>
+			</tr>
+			<tr>
+				<td>{{hotelName 2}}</td>
+				<td>{{pricing 2}}</td>
+				<td>{{rating 2}}</td>
+			</tr>
+			<tr>
+				<td>{{hotelName 3}}</td>
+				<td>{{pricing 3}}</td>
+				<td>{{rating 3}}</td>
+			</tr>
+			<tr>
+				<td>{{hotelName 4}}</td>
+				<td>{{pricing 4}}</td>
+				<td>{{rating 4}}</td>
+			</tr>
+		</tbody>
+	</table>						
+               </div>
+            </div>
+        </div>
 
-</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h4 class="panel-title">
+                    <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">3. Local Restaurants in {{ending}}</a>
+                </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse">
+                <div class="panel-body">
+
+
+
+				
+				<table class="cray">
+					<thead>
+						<tr>
+							<th>Name</th>
+							<th>Address</th>
+							<th>Rating</th>
+						</tr>
+					</thead>
+					<tbody>		
+						<tr>
+							<td>{{restaurantName 0}}</td>
+							<td>{{restaurantAddress 0}}</td>
+							<td>{{restaurantPhone 0}}</td>
+						</tr>
+						<tr>
+							<td>{{restaurantName 1}}</td>
+							<td>{{restaurantAddress 1}}</td>
+							<td>{{restaurantPhone 1}}</td>
+						</tr>
+						<tr>
+							<td>{{restaurantName 2}}</td>
+							<td>{{restaurantAddress 2}}</td>
+							<td>{{restaurantPhone 2}}</td>
+						</tr>
+						<tr>
+							<td>{{restaurantName 3}}</td>
+							<td>{{restaurantAddress 3}}</td>
+							<td>{{restaurantPhone 3}}</td>
+						</tr>
+						<tr>
+							<td>{{restaurantName 4}}</td>
+							<td>{{restaurantAddress 4}}</td>
+							<td>{{restaurantPhone 4}}</td>
+						</tr> 
+					</tbody>
+				</table> 
+
+
+
+
+	
+
+	
+
+                   
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+                                		                                		
+
+
+	<!-- <h1>FROM: {{starting}} TO: {{ending}}</h1> -->
+
+
+	
+
+
 
 </template>
 

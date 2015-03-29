@@ -2,11 +2,24 @@ Template.transportationModal.events({
 
 	'click .test': function(e){
 	
-		var start = $('.start').val();
-		var end = $('.end').val();
+		var start = $('.startField').val();
+		var end = $('.endField').val();
+		var mode = $('.active').text();
+
+		if(mode == "Car"){ mode = "driving"; }
+		else if (mode == "Bike") { mode = "bicycling"; }
+		else if (mode == "Transit") { mode = "transit"; }
+		else if (mode == ""){
+			return false;
+		}
+
+		if(mode == ""){
+		console.log("gg");
+	}
 
 		Session.setPersistent("usrStart", start);
 		Session.setPersistent("usrEnd", end);
+		Session.setPersistent("mode", mode);
 	},
 
 	'click .car': function(e){
@@ -23,25 +36,11 @@ Template.transportationModal.events({
 		 $('.car').removeClass('active');
 		 $('.plane').removeClass('active');
 		 $('.transit').addClass('active');
-	},
-
-	'click .travel': function(e){
-		if($('.startField').val() == "")
-		{
-			$('.startField').addClass('invalid');
-		}
-		else 
-		{
-			$('.startField').removeClass('invalid');
-		}
-
-		if($('.endField').val() == "")
-		{
-			$('.endField').addClass('invalid');	
-		}
-		else {
-			$('.endField').removeClass('invalid');
-		}
 	}
+
+
+
+
+	
 
 });

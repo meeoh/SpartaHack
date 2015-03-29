@@ -1,0 +1,26 @@
+body {
+	background: url("background.jpg") no-repeat center center fixed;
+	background-size: cover;
+}
+
+.ins {
+	width: 25%
+}
+
+.inputs {
+
+	margin-top: 3%;
+
+}
+
+.travel {
+	margin-top: 1%;
+}
+
+h1 {
+	font-family: intense;
+	margin-left: 36%;
+	margin-top: 14%;
+	color: white;
+	font-size: 60pt;
+}

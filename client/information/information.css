@@ -1,8 +1,51 @@
 body {
-	background-color: #FFDAB9;
+	background: url("horseshoe.jpg") no-repeat center center fixed;
+	background-size: cover;
 }
 
-h1 {
-	font-family: Georgia;
+.step {
+
 	color: black;
+}
+
+
+
+th {
+	font-size: 22px;
+	padding: 3px;
+}
+
+.travHeader {
+	font-size: 18px;
+
+	color: black;
+}
+
+td,th {
+
+	color: black;
+	font-family: impulse;
+}
+
+.locations {
+
+	color: #D4CCBA;
+	font-size: 50px;
+
+}
+
+.distance, .timing{
+	font-size: 20px;
+}
+
+.cray td, .cray th {
+	padding: 0 8px 0 8px;
+}
+
+.cray td {
+	font-size: 18px;
+}
+
+.bs-example{
+	margin-top: 7%;
 }
