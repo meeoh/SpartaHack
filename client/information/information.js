@@ -1,16 +1,16 @@
 Template.information.rendered = function(){
 
-	// Meteor.call('what', function(err, res){
-	// 	console.log(res);
-	// })
-
-	Meteor.call('what', function(err, data)
+	Meteor.call('hotels', Session.get('usrEnd'), function(err, res)
 	{
-		console.log(data);
-		Session.set("testing", data);
-
-		// Session.setPersistant("testing", data);
+		Session.set("hotelInfo", res);
 	});
+
+	Meteor.call('what', Session.get('usrStart'), Session.get("usrEnd"),
+		function(err, data)
+	{
+		Session.set("testing", data);
+	});
+
 
 };
 
@@ -30,8 +30,12 @@ Template.information.helpers({
 	},
 	'steps': function() {
 		return Session.get("testing")[4];
+	},
+	'rating': function(){
+		return Session.get("hotelInfo")[0];
+	},
+	'pricing': function(){
+		return Session.get("hotelInfo")[1];
 	}
-
-
 });
 

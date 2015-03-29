@@ -1,26 +1,47 @@
 Template.transportationModal.events({
 
-	// 'click .test': function(e){
-		
-			// Meteor.call('what',function(err,res){
-			// 	console.log(res);
-			// 	Session.setPersistent("Info", res);
-			// 	var wtf = Session.get('Info');
-			// 	console.log(wtf);
+	'click .test': function(e){
+	
+		var start = $('.start').val();
+		var end = $('.end').val();
 
-			// Meteor.call('what', function(err, data)
-			// {
-			// 	console.log("PLEASE: " + data);
-			// 	Session.setPersistant("testing", data);
-			// });
-		
+		Session.setPersistent("usrStart", start);
+		Session.setPersistent("usrEnd", end);
+	},
 
-				// console.log(ass);
-				
-				//console.log("testing");
-				// Session.setPersistent("Info", res);
-				// var wtf = Session.get('Info');
-				// console.log(wtf);
-			 
-	// }
+	'click .car': function(e){
+		 $('.car').addClass('active');
+		 $('.plane').removeClass('active');
+		 $('.transit').removeClass('active');
+	},
+	'click .plane': function(e){
+		 $('.car').removeClass('active');
+		 $('.plane').addClass('active');
+		 $('.transit').removeClass('active');
+	},
+	'click .transit': function(e){
+		 $('.car').removeClass('active');
+		 $('.plane').removeClass('active');
+		 $('.transit').addClass('active');
+	},
+
+	'click .travel': function(e){
+		if($('.startField').val() == "")
+		{
+			$('.startField').addClass('invalid');
+		}
+		else 
+		{
+			$('.startField').removeClass('invalid');
+		}
+
+		if($('.endField').val() == "")
+		{
+			$('.endField').addClass('invalid');	
+		}
+		else {
+			$('.endField').removeClass('invalid');
+		}
+	}
+
 });

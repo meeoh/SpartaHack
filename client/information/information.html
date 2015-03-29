@@ -72,9 +72,14 @@
 	<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTujpNtVRW856IOv8ojg4v_ibcGlQ9UIrn3HP7kZ-mZXuDXXr3e"> 
 
 	<ul> 
-		<li> Nearest Hotel: Hotel Name: Locations: </li>
+		<!--<li> Nearest Hotel: Hotel Name: Locations: </li>-->
+		{{#each rating}} 
+			<li>{{.}}</li> 
+		{{/each}} 
+		{{#each pricing}}
+			<li>{{.}}</li>
+		{{/each}}
 	</ul>
-	ALIGN LEFT> 
 	<h4> Attractions & Activites </h4> <img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQE-Gl80uKvrTo6JQYQdLNJ5PhqhJAz-42g-bKKvXzHSFCqf9jM" />
 
 	<!-- <ul>
